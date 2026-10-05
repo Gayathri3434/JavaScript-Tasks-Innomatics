@@ -5,47 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+  *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: arial,sans-serif;
+            padding: 30px;
+            background:linear-gradient(rgb(95, 95, 235),rgb(129, 127, 127));
+        }
+        .conditions{
+            width:80%;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border: 1px solid black;
+            display: grid;
+        }
+        .Card-Container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 10px;
+
+        }
+        .logics input{
+            margin: 5px 0;
+            background-color:rgb(244, 240, 240);
+        }
+        button{
+            color: blue;
+            background-color:yellow;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+        button:hover{
+            background-color:rgb(153, 235, 153); 
+        }
+        @media (max-width: 900px) {
+    .logics-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+   }
+    @media (max-width: 600px) {
+        .logics-container {
+            grid-template-columns: repeat(1fr);
+            padding: 15px;
+        }
+    }
+</style>
 <body>
+<div class="Card-Container">
 
     <!-- <h1>IF Examples</h1> -->
-    <!-- <label>Enter the input:</label>
+
+<div class="conditions">
+    <label>Enter the input:</label>
     <input type="text" id="num"><br>
     <button onclick=checkpositive()>positive or not</button><br>
     <label>Result:</label>
-    <input type="text" id="res"> -->
+    <input type="text" id="res">
+  </div>
 
-    <!-- <label>Enter the age:</label>
+<div class="conditions">
+    <label>Enter the age:</label>
     <input type="text" id="age"><br>
     <button onclick=eligibleornot()>Eligible or not</button><br>
     <label>Result:</label>
-    <input type="text" id="res"> -->
-
-    <!-- <label>Enter the temperature:</label>
+    <input type="text" id="res">
+    </div>
+    
+<div class="conditions">
+    <label>Enter the temperature:</label>
     <input type="text" id="temp"><br>
     <button onclick=tempwarning()>Temperature warning</button><br>
     <label>Result:</label>
-    <input type="text" id="res"> -->
+    <input type="text" id="res">
+    </div>
 
-    <!-- <label>Enter the amount:</label>
+<div class="conditions">
+    <label>Enter the amount:</label>
     <input type="text" id="amount"><br>
     <button onclick=shoppingdiscount()>eligibilty for discount</button><br>
     <label>Result:</label>
-    <input type="text" id="res"> -->
+    <input type="text" id="res">
+    </div>
 
     <!-- <h1>if...else examples</h1> -->
-     <!-- <label>Enter the number:</label>
+
+<div class="conditions">
+    <label>Enter the number:</label>
     <input type="text" id="num"><br>
     <button onclick=threedigit()>check</button><br>
     <label>Result:</label>
-    <input type="text" id="res"> -->
+    <input type="text" id="res">
+    </div>
 
-    <!-- <label>Enter the number:</label>
+<div class="conditions">
+    <label>Enter the number:</label>
     <input type="text" id="num"><br>
     <button onclick=divisible()>check</button><br>
     <label>Result:</label>
-    <input type="text" id="res"> -->
+    <input type="text" id="res">
+</div>
 
-    <!-- <label>Enter the value of a:</label>
+<div class="conditions">
+    <label>Enter the value of a:</label>
     <input type="text" id="valuea"><br>
     <label>Enter the value of b:</label>
     <input type="text" id="valueb"><br>
@@ -53,10 +119,13 @@
     <input type="text" id="valuec"><br>
     <button onclick=trianglevalidornot()>check</button><br>
     <label>Result:</label>
-    <input type="text" id="res"> -->
+    <input type="text" id="res">
+    </div>
 
     <!-- <h1>if else if examples</h1> -->
-     <!-- <label>Enter the value of a:</label>
+
+<div class="conditions">
+     <label>Enter the value of a:</label>
     <input type="text" id="valuea"><br>
     <label>Enter the value of b:</label>
     <input type="text" id="valueb"><br>
@@ -64,37 +133,47 @@
     <input type="text" id="valuec"><br>
     <button onclick=typeoftriangle()>check</button><br>
     <label>Result:</label>
-    <input type="text" id="res"> -->
+    <input type="text" id="res">
+    </div>
 
-    <!-- <label>Enter the units:</label>
+<div class="conditions">
+    <label>Enter the units:</label>
     <input type="text" id="units"><br>
     <button onclick=calculatebill()>BILL</button><br>
     <label>BILL:</label>
-    <input type="text" id="res">  -->
-<!--     
+    <input type="text" id="res"> 
+    </div>
+    
+<div class="conditions">
     <label>Enter the age:</label>
     <input type="text" id="age"><br>
     <button onclick=category()> check category</button><br>
     <label>result:</label>
-    <input type="text" id="res"> -->
+    <input type="text" id="res">
+    </div>
 
-    <!-- <label>Enter the Year:</label>
+<div class="conditions">
+    <label>Enter the Year:</label>
     <input type="text" id="year"><br>
     <button onclick=checkleap()> check leap year</button><br>
     <label>result:</label>
-    <input type="text" id="res">  -->
+    <input type="text" id="res"> 
+    </div>
 
-    <!-- <label>Enter the age:</label>
+<div class="conditions">
+    <label>Enter the age:</label>
     <input type="text" id="age"><br>
      <label>Enter the weight:</label>
     <input type="text" id="weight"><br>
     <button onclick=blooddonate()> check</button><br>
     <label>result:</label>
-    <input type="text" id="res"> -->
+    <input type="text" id="res">
+    </div>
    
-    <!-- <label>Enter the marks in maths:</label>
+<div class="conditions">
+    <label>Enter the marks in maths:</label>
     <input type="text" id="m"><br>
-      <label>Enter the marks in phyiscs:</label>
+    <label>Enter the marks in phyiscs:</label>
     <input type="text" id="p"><br>
      <label>Enter the marks in biology:</label>
     <input type="text" id="b"><br>
@@ -102,20 +181,23 @@
     <input type="text" id="e"><br>
     <button onclick=calgrade()> check</button><br>
     <label>result:</label>
-    <input type="text" id="res"> -->
+    <input type="text" id="res">
+    </div>
     
-    <!-- <label>Enter the age:</label>
+<div class="conditions">
+    <label>Enter the age:</label>
     <input type="text" id="age"><br>
      <label>Enter the score:</label>
     <input type="text" id="score"><br>
     <button onclick=scholarship()> check</button><br>
     <label>result:</label>
-    <input type="text" id="res"> -->
+    <input type="text" id="res">
 
-
+</div>
     <!-- <h1>Switch case</h1> -->
 
-    <!-- <label>Enter the n1 value:</label>
+<div class="conditions">
+    <label>Enter the n1 value:</label>
     <input type="text" id="n1"><br>
       <label>Enter the n2 value:</label>
     <input type="text" id="n2"><br>
@@ -123,8 +205,9 @@
     <input type="text" id="op"><br>
     <button onclick=operations()> check</button><br>
     <label>result:</label>
-    <input type="text" id="res"> -->
-    
+    <input type="text" id="res">
+</div>
+    </div>
     <script type="text/javascript" src="conditionalStatements.js"></script>
 </body>
 </html>
