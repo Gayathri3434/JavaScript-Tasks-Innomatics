@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js-Logic</title>
+    <script>
+        function calculateAvg(){
+            var n1=Number(document.getElementById("num1").value);
+            var n2=Number(document.getElementById("num2").value);
+            var n3=Number(document.getElementById("num3").value);
+            var sum=n1+n2+n3
+            var avg=sum/3;
+            document.getElementById("result").value=avg;
+        }
+
+        function calAvg(){
+            var n1=Number(document.getElementById("num4").value);
+            var n2=Number(document.getElementById("num5").value);
+            var n3=Number(document.getElementById("num6").value);
+            var sum=n1+n2+n3;
+            var avg=sum/3;
+            document.write("Average of Numbers is =",avg)
+        }
+
+        function sumNatu(){
+            var n=Number(document.getElementById("sumN").value);
+            var sum=n*(n+1)/2;
+            document.getElementById("res").value=sum
+        }
+
+        function avgNatu(){
+            var n=Number(document.getElementById("avgN").value);
+            var sum=n*(n+1)/2;
+            var avg=sum/n
+            document.getElementById("res1").value=avg
+        }
+
+        function proPercent(){
+        let cp=parseInt(document.getElementById("cost").value);
+        let sp=parseInt(document.getElementById("selling").value);
+        let profit=sp-cp
+        let profitper=(profit/cp)*100
+        document.getElementById("pro1").value=profit
+        document.getElementById("pro2").value=profitper
+        }
+
+        function simpleIns(){
+            const p=Number(document.getElementById("prince").value)
+            const r=Number(document.getElementById("rate").value)
+            const t=Number(document.getElementById("time").value)
+            const si=(p*t*r)/100;  
+            document.getElementById("simp1").value=si;
+        }
+
+        function missingAngle(){
+            var angle1=Number(document.getElementById("angle1").value)
+            var angle2=Number(document.getElementById("angle2").value)
+            var sum=angle1+angle2;
+            var missing=180-sum;
+            document.getElementById("angle").value=missing;
+        }
+
+        function lastDigit(){
+            var num=Number(document.getElementById("ld").value)
+            var last=num%10;
+            document.getElementById("lastdigit").value=last;
+        }
+
+        function removeLastDigit(){
+            var n=Number(document.getElementById("removeld1").value);
+            var result=Math.floor(n/10);
+            document.getElementById("removeld").value=result;
+        }
+
+        function firstDigit3(){
+            var num=Number(document.getElementById("threeNum").value);
+            var result=Math.floor(num/10);
+            var final=Math.floor(result/10);
+            document.getElementById("firstDigit").value=final;
+        }
+
+        function firstDigit5(){
+            var value=Number(document.getElementById("fiveNum").value);
+            var result=Math.floor(value/10000);
+            document.getElementById("firstFive").value=result;
+        }
+
+        function celsiusToFahrenheit(){
+            var c=Number(document.getElementById("celsius").value);
+            var f=(c*9/5)+32;
+            document.getElementById("fahrenheit").value=f;
+        }
+
+        function FahrenheitToCelsius(){
+            var f=Number(document.getElementById("fahren").value);
+            var c=(f-32)*5/9;
+            document.getElementById("cel").value=c;
+        }
+
+        function grossSalary(){
+            var basic=Number(document.getElementById("basic").value);
+            var hra=Number(document.getElementById("hra").value);
+            var da=Number(document.getElementById("da").value);
+            var HRA=basic*hra /100;
+            var DA=basic*da/100;
+            var GrossSalary=basic+HRA+DA;
+            document.getElementById("gross").value=GrossSalary;
+        }
+
+        function swapNumbers(){
+            var a=Number(document.getElementById("n1").value);
+            var b=Number(document.getElementById("n2").value);
+            var a=a+b;
+            var b=a-b;
+            var a=a-b;
+            document.getElementById("swa1").value=a;
+            document.getElementById("swa2").value=b;
+        }
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: arial,sans-serif;
+            padding: 30px;
+            background-color: rgb(110, 201, 201);
+        }
+        .logics{
+            width:80%;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border: 1px solid black;
+            display: grid;
+        }
+        .logics-container{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 10px;
+
+        }
+        .logics input{
+            margin: 5px 0;
+            background-color:rgb(244, 240, 240);
+        }
+        button{
+            color: blue;
+            background-color:yellow;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+        button:hover{
+            background-color:rgb(153, 235, 153); 
+        }
+        @media (max-width: 900px) {
+    .logics-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+   }
+    @media (max-width: 600px) {
+        .logics-container {
+            grid-template-columns: repeat(1fr);
+            padding: 15px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="logics-container">
+
+     <!-- 1.Average of 3 numbers -->
+
+    <div class="logics">
+        <h4>Average of 3 Numbers</h4>
+    <label>Enter num1:</label>
+    <input type="text" id="num1"><br>
+    <label>Enter num2:</label>
+    <input type="text" id="num2"><br>
+    <label>Enter num3:</label>
+    <input type="text" id="num3"><br>
+    <label>Average</label>
+    <input type="text" id="result" readonly><br>
+    <button onclick="calculateAvg()">Calculate</button>
+    </div>
+
+    <!-- 2.Average of 3 numbers using DOM -->
+
+    <div class="logics">
+        <h4>Average of 3 Numbers using DOM</h4>
+        <label>Enter num1:</label>
+    <input type="text" id="num4"><br>
+    <label>Enter num2:</label>
+    <input type="text" id="num5"><br>
+    <label>Enter num3:</label>
+    <input type="text" id="num6"><br>
+    <button onclick="calAvg()">Average</button>
+    </div>
+
+    <!--3.Sum of first N natural numbers -->
+
+    <div class="logics">
+      <h4>Sum of N natural numbers</h4>
+      <label>Enter N</label>
+      <input type="text" id="sumN">
+      <label>Sum</label>
+      <input type="text" id="res" readonly>
+      <button onclick="sumNatu()">Calculate</button>
+    </div>
+
+    <!--4.Average of first N natural numbers -->
+
+   <div class="logics">
+    <h4>Average of first N natural numbers</h4>
+    <label>Enter N</label>
+    <input type="text" id="avgN">
+    <label>Average of Natural Numbers</label>
+    <input type="text" id="res1" readonly>
+      <button onclick="avgNatu()">Calculate</button>
+   </div>
+
+   <!-- 5.Profit percentage -->
+
+    <div class="logics">
+      <h4>Profit percentage</h4><br>
+      <label>Enter cost-price:</label>
+      <input type="text" id="cost" >
+      <label>Enter selling price:</label>
+      <input type="text" id="selling">
+      <label>profit:</label>
+      <input type="text" id="pro1" readonly>
+      <label>Profit percentage</label>
+      <input type="text" id="pro2" readonly>
+      <button onclick="proPercent()">Profit%</button>
+</div>
+
+<!-- 6.Simple Interest -->
+
+<div class="logics">
+    <h4>Simple Interest</h4>
+    <label>Enter Principal:</label>
+    <input type="text" id="prince"><br>
+    <label>Enter Rate:</label>
+    <input type="text" id="rate"><br>
+    <label>Enter Time:</label>
+    <input type="text" id="time"><br>
+    <label>Simple Interest</label>
+    <input type="text" id="simp1" readonly>
+    <button onclick="simpleIns()">Calculate</button>
+</div>
+
+<!--7.Missing angle -->
+
+<div class="logics">
+    <h4>Missing Angle of a Triangle</h4>
+    <label>Enter angle 1:</label>
+    <input type="text" id="angle1"><br>
+    <label>Enter angle 2:</label>
+    <input type="text" id="angle2"><br>
+    <label>Missing Angle</label>
+    <input type="text" id="angle" readonly>
+    <button onclick="missingAngle()">Calculate</button>
+</div>
+
+<!--8.Display last digit -->
+
+<div class="logics">
+    <h4>Last digit</h4>
+    <label>Enter Number:</label>
+    <input type="text" id="ld"><br>
+    <label>Last digit</label>
+    <input type="text" id="lastdigit" readonly>
+    <button onclick="lastDigit()">Lastdigit is</button>
+</div>
+
+<!--9.Remove lastDigit -->
+
+<div class="logics">
+    <h4>Remove last-digit</h4>
+    <label>Enter Number:</label>
+    <input type="text" id="removeld1"><br>
+    <label>Display remaining number</label>
+    <input type="text" id="removeld" readonly>
+    <button onclick="removeLastDigit()">Display</button>
+</div>
+
+<!--10.First digit of a 3-digit number -->
+
+<div class="logics">
+     <h4>First digit of a 3-digit number</h4>
+     <label>Enter 3-digit Number</label>
+     <input type="text" id="threeNum">
+     <label>First Digit</label>
+     <input type="text" id="firstDigit" readonly>
+     <button onclick="firstDigit3()">Display</button>
+</div>
+
+<!--11.First digit of a 5-digit number -->
+
+   <div class="logics">
+    <h4>First digit of a 5-digit number</h4>
+    <label>Enter 5-digit Number</label>
+    <input type="text" id="fiveNum">
+    <label>First Digit</label>
+    <input type="text" id="firstFive" readonly>
+    <button onclick="firstDigit5()">Display</button>
+   </div>
+
+   <!--12.Celsius to Fahrenheit -->
+
+   <div class="logics">
+    <h4>Celsius to Fahrenheit</h4>
+      <label>Enter Celsius</label>
+      <input type="text" id="celsius">
+      <label>Fahrenheit</label>
+      <input type="text" id="fahrenheit" readonly>
+      <button onclick="celsiusToFahrenheit()">Convert</button>
+   </div>
+
+   <!--13.Fahrenheit to Celsius. -->
+
+    <div class="logics">
+        <h4>Fahrenheit to celsius</h4>
+        <label>Enter Fahrenheit </label>
+        <input type="text" id="fahren">
+        <label>Celsius</label>
+        <input type="text" id="cel" readonly>
+        <button onclick="FahrenheitToCelsius()">Convert</button>
+    </div>
+
+    <!-- 14.Gross salary -->
+
+    <div class="logics">
+        <h4>Gross Salary</h4>
+        <label>Enter Basic Salary</label>
+        <input type="text" id="basic">
+        <label>Enter HRA</label>
+        <input type="text" id="hra">
+        <label>Enter DA</label>
+        <input type="text" id="da">
+        <label>Gross Salary</label>
+        <input type="text" id="gross" readonly>
+        <button onclick="grossSalary()">Calculate</button>
+    </div>
+
+    <!-- 15.swapping numbers by 3 variables -->
+    <div class="logics">
+        <h4>Swap Two Numbers Using a Third Variable</h4>
+        <label>Enter Number1</label>
+        <input type="text" id="numb1">
+        <label>Enter Number2</label>
+        <input type="text" id="numb2">
+        <label>Number 1</label>
+        <input type="text" id="swap1">
+        <label>Number 2</label>
+        <input type="text" id="swap2">
+        <button onclick="swapNumbers()">Swap</button>
+    </div>
+
+    <!--16.Swapping numbers by using 2 variables -->
+    <div class="logics">
+        <h4>Swap Two Numbers Using a Third Variable</h4>
+        <label>Enter Number1</label>
+        <input type="text" id="n1">
+        <label>Enter Number2</label>
+        <input type="text" id="n2">
+        <label>Number 1</label>
+        <input type="text" id="swa1">
+        <label>Number 2</label>
+        <input type="text" id="swa2">
+        <button onclick="swapNumbers()">Swap</button>
+    </div>
+</div>
+</body>
+</html>
+
